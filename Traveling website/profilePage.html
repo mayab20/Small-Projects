@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-sacle=1.0"/> 
+        <title></title>
+        <link rel="stylesheet" href="profilePage.css">   
+    </head>
+    <body>
+        <a href="index.html"><img src="plane.png" width="150px" height="150px"></a>
+        <div class="description">
+            <img class="profilePic" src="une vague.jpg">
+            <div class="username">UserName</div>
+            <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="info">
+                <div>0 Followers</div>
+                <div>0 Followings</div>
+                <div>0 Posts</div>
+            </div>
+        </div>
+        <div class="cursor"></div>
+        <script>
+            var cursor= document.querySelector('.cursor');
+            document.addEventListener("mousemove",function(e){
+                cursor.style.cssText="left: "+ e.clientX + "px; top: " + e.clientY +"px;";
+            });
+        </script>
+    </body>
+</html>

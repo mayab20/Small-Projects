@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="loginPage.css">
+    </head>
+
+    <body>
+        <a href="index.html"><img src="plane.png" width="150px" height="150px"></a>
+        <div class="container">
+            <input type="checkbox" id="toggle">
+            <div class="slider">
+
+                <from class="form">
+                    <span class="title" >Sign In</span>
+                    <div class="input-box">
+                        <input type="text" class="input" required>
+                        <label class="label">Username/Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input" required>
+                        <label class="label">Password</label>
+                    </div>
+                    <button>Sign In</button>
+                    <span class="text">Don't have an account?
+                        <label for="toggle" class="switch">Sign Up</label>
+                    </span>
+                </from>
+
+                <from class="form">
+                    <span class="title">Sign Up</span>
+                    <div class="input-box">
+                        <input type="text" class="input" required>
+                        <label class="label">Username</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" class="input" required>
+                        <label class="label">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input" required>
+                        <label class="label">Password</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input" required>
+                        <label class="label">Confrim Password</label>
+                    </div>
+                    <button>Sign Up</button>
+                    <span class="text">Already have an account?
+                        <label for="toggle" class="switch">Sign In</label>
+                    </span>
+                </from>
+
+            </div>
+        </div>
+        <div class="cursor"></div>
+        <script>
+            var cursor= document.querySelector('.cursor');
+            document.addEventListener("mousemove",function(e){
+                cursor.style.cssText="left: "+ e.clientX + "px; top: " + e.clientY +"px;";
+            });
+        </script>
+    </body>
+
+</html>

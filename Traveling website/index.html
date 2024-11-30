@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="description" content="most beautiful places to visit"/>
+        <meta name="viewport" content="width=device-width, initial-sacle=1.0"/>
+        <meta name="keywords" content=" travel, tourist"/>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        <nav class="navbar">
+                <a href="profilePage.html"><div class="div">Profile</div></a>
+
+                <a href="loginPage.html"><div class="div">Sign In</div></a>
+       
+                <div class="div">Search</div>
+        </nav>
+        <div class="cursor"></div>
+        <script>
+            var cursor= document.querySelector('.cursor');
+            document.addEventListener("mousemove",function(e){
+                cursor.style.cssText="left: "+ e.clientX + "px; top: " + e.clientY +"px;";
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    background: rgb(4, 1, 14);
+}
+
+button {
+    position: relative;
+    padding: 20px 60px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    background: rgba(0, 0, 0, 5);
+    transition:1s;
+    overflow:hidden;
+    text-decoration: none;
+    cursor: pointer;
+    color:white;
+}
+
+button:hover {
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+                0 0 30px var(--clr),
+                0 0 60px var(--clr),
+                0 0 100px var(--clr);
+}
+
+button::before {
+    content: '';
+    height: 400%;
+    width:30px;
+    position:absolute;
+    background:var(--clr);
+    transition: 1s;
+    animation: animate 2s linear infinite;/* animation-name animation-duration animation-timing-function animation-iteration-count*/ 
+    animation-delay: calc(.33s*var(--i));/*the time that will take the animation to start after refreshing the page*/
+}
+
+button:hover:before{
+    width:120%;
+
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    background: rgb(21, 3, 42);
+    inset:4px;
+    transition: .5s;
+}
+
+button:hover::after{
+    background: var(--clr);
+}
+
+button span{
+    position: relative;
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+    z-index:1;
+    text-transform: uppercase;
+    opacity:.8;
+    letter-spacing: 4px;
+    transition: .5s;
+}
+
+button:hover span{
+    opacity:1;
+    color: black;
+}

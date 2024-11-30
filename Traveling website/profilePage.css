@@ -1,0 +1,88 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(1, 60, 83);
+    cursor: none;
+}
+
+a{
+    cursor:none;
+}
+
+img{
+    position: absolute;
+    left:10px;
+    top:10px;
+}
+
+.description{
+    width: 70%;
+    height:200px;
+    position:absolute;
+    left:20%;
+    top:20px;
+    border-radius: 15px;
+    background:rgba(2, 80, 111, 0.458) ;
+    box-shadow: 0 0 10px 5px rgba(159, 193, 227, 0.44);
+    color:white;
+    font-size:20px;
+    font-weight: 400;
+}
+
+.profilePic{
+    width:150px;
+    height: 150px;
+    border-radius: 200px;
+    left:30px;
+}
+
+.username{
+    position: relative;
+    left:30%;
+    top:20px;
+}
+
+.bio{
+    width:200px;
+    position: relative;
+    left:30%;
+    top:40px;
+}
+
+.info{
+    width:600px;
+    position:relative;
+    left:80%;
+    top: -50px;
+}
+
+.info div{
+    padding:10px;
+}
+
+.cursor{
+    position:fixed;
+    width: 20px;
+    height:20px;
+    left:0;
+    top:0;
+    box-shadow: 0 0 20px rgb(255, 255, 255),
+                2px 2px 40px rgb(255, 255, 255),
+                4px 4px 60px rgb(255, 255, 255),
+                6px 6px 80px rgb(255, 255, 255);
+    opacity:50;
+    background-color: transparent ;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: .1s;
+}
