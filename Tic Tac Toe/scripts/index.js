@@ -52,11 +52,11 @@ let player2Turn=false;
 let player1Score=0;
 let player2Score=0;
 
-
 const gridDiv=document.querySelector('.js-grid-div');
 
 let gridDivHTML='';
 
+//generate the grid
 divisions.forEach((division)=>{
   gridDivHTML +=`<div class="div${division.id} js-div-${division.id}"></div>`;
 });
@@ -71,9 +71,9 @@ document.querySelector('.js-player1-score').innerHTML=player1Score;
 
 document.querySelector('.js-player2-score').innerHTML=player2Score;
 
+
+
 play();
-
-
 
 function play(){
   divisions.forEach((division)=>{
@@ -112,7 +112,8 @@ function play(){
               if(div1.playedBy===div2.playedBy&&div2.playedBy===div3.playedBy&&div1.playedBy!==' '){
                 if(div1.playedBy==='player1'){
                   player1Score++;
-                }else{
+                }
+                if(div1.playedBy==='player2'){
                   player2Score++;
                 }
               }
@@ -126,37 +127,12 @@ function play(){
         document.querySelector('.js-player2-score').innerHTML=player2Score;
 
         gridDiv.innerHTML=gridDivHTML;
-      divisions.forEach((div)=>{
-        div.isPlayed=false;
-        div.playedBy=' ';
-      });
-      player1Turn=true;
-      player2Turn=false;
-      play();
+        divisions.forEach((div)=>{
+          div.isPlayed=false;
+          div.playedBy=' ';
+        });
+        player1Turn=true;
+        player2Turn=false;
+        play();
     });
-  
 }
-
-  
-
-  document.querySelector('.js-reset-button').addEventListener('click',()=>{
-    divisions.forEach((div)=>{
-      div.isPlayed=false;
-      div.playedBy=' ';
-    });
-    player1Turn=true;
-    player2Turn=false;
-    player1Score=0;
-    player2Score=0;
-    document.querySelector('.js-player1-score').innerHTML=player1Score;
-    document.querySelector('.js-player2-score').innerHTML=player2Score;
-  });
-
-
-
-
-
-
-
-
-

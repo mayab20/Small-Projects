@@ -1,0 +1,101 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+
+.container{
+  position: relative;
+  width: 350px;
+  border-radius: 15px;
+  overflow:hidden;
+  color: white;
+  background: rgba(2, 80, 111, 0.458);
+  backdrop-filter: blur(35px);
+  box-shadow: 0 5px 25px rgba(242, 244, 247, 0.479);
+}
+
+.container .slider{
+  width: 200%;
+  position: relative;
+  display: flex;
+  transition: transform ease-out .3s;
+}
+
+#toggle{
+  display: none;
+}
+
+.container #toggle:checked + .slider{
+  transform: translateX(-50%);
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+  padding: 2em;
+  width: 50%;
+}
+
+.title{
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.input-box{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.input-box .input{
+  width: 100%;
+  border: none;
+  outline:none;
+  background: rgba(255,255,255,.25);
+  color:white;
+  padding: 0.6rem;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+button{
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.6rem;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 5px;
+  background: rgba(255,255,255,.25);
+  transition: .2s ease;
+}
+
+button:hover{
+  background: rgba(255,255,255,.35);
+}
+
+.text{
+  font-size: 14px;
+}
+
+.text .switch{
+  font-weight: 600;
+
+}
